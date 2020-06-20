@@ -2,6 +2,16 @@ provider "azurerm" {
   version = "~>2.0"
   features {}
 }
+
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "az-tf-tut-infra-rg"
+    storage_account_name  = "aztftutinfra"
+    container_name        = "infra"
+    key                   = "terraform.tfstate"
+  }
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = "az-tf-tut-rg"
   location = var.location
