@@ -1,1 +1,1 @@
-# ps-terraform-azure
+# az-tf-tut
