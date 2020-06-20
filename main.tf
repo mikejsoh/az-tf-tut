@@ -3,6 +3,10 @@ provider "azurerm" {
   features {}
 }
 
+provider "tls" {
+  version = "~>2.1"
+}
+
 terraform {
   backend "azurerm" {
     resource_group_name   = "az-tf-tut-infra-rg"
